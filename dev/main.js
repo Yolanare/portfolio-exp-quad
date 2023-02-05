@@ -421,7 +421,7 @@ function init() {
             } else {
                 picName = thumbSRC.substr(thumbSRC.lastIndexOf('/') + 1);
 
-                content = `<img class="picv-img" src="../assets/medias/photographie/thumbnails/${picName}">`;
+                content = `<img class="picv-img" src="https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/thumbnails/${picName}">`;
             }
             this.classList.add("focus");
 
@@ -478,8 +478,8 @@ function init() {
                     image.addEventListener('load', () => elem.src = highResUrl);
                     image.src = highResUrl;
                 };
-                picVimg.style.backgroundImage = 'url("../assets/medias/photographie/thumbnails/' + picName + '")';
-                loadHighResImage(picVimg, '../assets/medias/photographie/high/' + picName);
+                picVimg.style.backgroundImage = 'url("https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/thumbnails/' + picName + '")';
+                loadHighResImage(picVimg, 'https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/high/' + picName);
             }
 
             picVC.querySelectorAll('div[class^="picv-"]').forEach(function(p) {
@@ -544,7 +544,7 @@ function init() {
             vidTile.innerHTML = `
                 <div class="anim-fill"></div>
                 <div class="anim-flash"></div>
-                <div class="vid-thumb-c"><img class="vid-thumbnail" src="../assets/medias/video/thumbnails/` + vid.thumbnail + `"><div class="blocker"></div></div>
+                <div class="vid-thumb-c"><img class="vid-thumbnail" src="https://yolan.art/portfolio-exp-quad/dev/assets/medias/video/thumbnails/` + vid.thumbnail + `"><div class="blocker"></div></div>
                 <div class="vid-title"><span>` + vid.title + `</span></div>
             `
             document.querySelector('.video-list').appendChild(vidTile);

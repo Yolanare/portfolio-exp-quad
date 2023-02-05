@@ -10,7 +10,7 @@ const DIR = {
   public: "public"
 };
 const specialFilesToCopy = [
-  ["CNAME", "./"],
+  //["CNAME", "./"],
   [".nojekyll", "./"]
 ];
 
@@ -41,14 +41,14 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
         ]
       })
     ),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: DIR.dev+"/assets/medias",
-          to: "assets/medias"
-        }
-      ]
-    })
+    //new CopyWebpackPlugin({
+    //  patterns: [
+    //    {
+    //      from: DIR.dev+"/assets/medias",
+    //      to: "assets/medias"
+    //    }
+    //  ]
+    //})
   ]
 });
 
