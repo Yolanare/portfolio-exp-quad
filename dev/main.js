@@ -3,7 +3,7 @@ import SwupScrollPlugin from '@swup/scroll-plugin';
 import Parallax from 'parallax-js';
 
 import "./index.html"
-import "./photographie/index.html"
+import "./photo/index.html"
 import "./video/index.html"
 import "./contact/index.html"
 import "./main.scss"
@@ -26,7 +26,7 @@ var parallaxBG = new Parallax(document.getElementById('parallax-bg'), {
 var doc = document.documentElement,
     isMobile = undefined,
     svgNS = 'http://www.w3.org/2000/svg',
-    vhtrpColor = {'accueil' : '#4B4B4B', 'photographie' : '#F7F7F7', 'video' : '#0F0F0F', 'contact' : '#D2D2D2'};
+    vhtrpColor = {'accueil' : '#4B4B4B', 'photo' : '#F7F7F7', 'video' : '#0F0F0F', 'contact' : '#D2D2D2'};
 
 function checkWinSize() { if(window.innerWidth > 727) { isMobile = false; } else { isMobile = true; }};
 checkWinSize(); window.addEventListener('resize', checkWinSize);
@@ -95,8 +95,8 @@ function init() {
 
     var pathDir;
     function getPageID() {
-        pathDir = ((window.location.pathname).replace(/\/[^/]*$/, '')).replace(/^\//, '');
-        if(window.location.pathname == '/' || window.location.pathname == '/index.html') { pathDir = 'accueil'; }
+        pathDir = window.location.pathname.replace("index.html", "").replace(/\/[^/]*$/, '').replace(/^\//, ''); // remove "index.thml", start and end "/"
+        if(pathDir == "" || !["photo", "video", "contact"].includes(pathDir.match(/([^\/]+$)/)[0])) { pathDir = 'accueil'; }; // match if page after last "/", check if home
         return pathDir;
     }
     getPageID();
@@ -104,10 +104,12 @@ function init() {
     if(pathDir == 'accueil' || pathDir == 'contact') { parallaxBG.enable(); } else { parallaxBG.disable(); }
 
     if (navPos.hasChildNodes() == false) { // NAVIGATION
+        const urlBegin = window.location.href.replace(/\/(index.html|photo|video|contact)(.*)/, "").replace(/\/$/, "");
+
         navPos.innerHTML = `
             <div>
                 <div id="navaccueil-content">
-                    <a id="accueil" class="navlink" href="/">
+                    <a id="accueil" class="navlink" href="${urlBegin}">
                         <div>
                             <div id="wn-v" class="nav-name">QUAD-PAGE</div>
                             <div id="wn-h" class="nav-name">PORTFOLIO</div>
@@ -116,7 +118,7 @@ function init() {
                     <div class="nav-separator"></div>
                 </div>
                 <nav>
-                    <a id="photographie" class="navlink navlink-p" href="/photographie/">
+                    <a id="photo" class="navlink navlink-p" href="${urlBegin}/photo/">
                         <div>
                             <div class="nav-sel"></div>
                             <div class="navbtns-content">
@@ -138,11 +140,11 @@ function init() {
                                         </g>
                                     </svg>
                                 </div>
-                                <span>PHOTOGRAPHIE</span>
+                                <span>PHOTO</span>
                             </div>
                         </div>
                     </a>
-                    <a id="video" class="navlink navlink-p" href="/video/">
+                    <a id="video" class="navlink navlink-p" href="${urlBegin}/video/">
                         <div>
                             <div class="nav-sel"></div>
                             <div class="navbtns-content">
@@ -158,11 +160,11 @@ function init() {
                                     </g>
                                     </svg>
                                 </div>
-                                <span>VIDÉO</span>
+                                <span>VIDEO</span>
                             </div>
                         </div>
                     </a>
-                    <a id="contact" class="navlink navlink-p" href="/contact/">
+                    <a id="contact" class="navlink navlink-p" href="${urlBegin}/contact/">
                         <div>
                             <div class="nav-sel"></div>
                             <div class="navbtns-content">
@@ -403,7 +405,7 @@ function init() {
         navIconsTr(null);
     }
 
-    if(pathDir == 'photographie') {
+    if(pathDir == 'photo') {
         var pViewer = document.querySelector('#photo-viewer');
         if(!pViewer) {
             var pViewer = document.createElement('div');
@@ -421,7 +423,7 @@ function init() {
             } else {
                 picName = thumbSRC.substr(thumbSRC.lastIndexOf('/') + 1);
 
-                content = `<img class="picv-img" src="https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/thumbnails/${picName}">`;
+                content = `<img class="picv-img" src="https://yolan.art/portfolio-exp-quad/dev/assets/medias/photo/thumbnails/${picName}">`;
             }
             this.classList.add("focus");
 
@@ -478,8 +480,8 @@ function init() {
                     image.addEventListener('load', () => elem.src = highResUrl);
                     image.src = highResUrl;
                 };
-                picVimg.style.backgroundImage = 'url("https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/thumbnails/' + picName + '")';
-                loadHighResImage(picVimg, 'https://yolan.art/portfolio-exp-quad/dev/assets/medias/photographie/high/' + picName);
+                picVimg.style.backgroundImage = 'url("https://yolan.art/portfolio-exp-quad/dev/assets/medias/photo/thumbnails/' + picName + '")';
+                loadHighResImage(picVimg, 'https://yolan.art/portfolio-exp-quad/dev/assets/medias/photo/high/' + picName);
             }
 
             picVC.querySelectorAll('div[class^="picv-"]').forEach(function(p) {

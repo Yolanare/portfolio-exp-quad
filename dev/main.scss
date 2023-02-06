@@ -3,7 +3,7 @@
     --accent-sec: var(--bgpage-f);
     --accent-prim: #ffffff;
 }
-:root#photographie,
+:root#photo,
 :root#contact {
     --accent-sec: var(--bgpage-f);
     --accent-prim: #000000;
@@ -260,26 +260,26 @@ nav {
     opacity: 1;
     transform-box: fill-box;
 }
-#photographie > div > .navbtns-content svg.navicons g > g#sun > g {
+#photo > div > .navbtns-content svg.navicons g > g#sun > g {
     transform: rotateZ(0deg);
     transform-origin: center;
     transform-box: fill-box;
 }
-#photographie > div > .navbtns-content svg.navicons g.nli-current > g#sun > g {
+#photo > div > .navbtns-content svg.navicons g.nli-current > g#sun > g {
     transform: rotateZ(-180deg) !important;
 }
-#photographie > div > .navbtns-content svg.navicons g#mountain .to-fill {
+#photo > div > .navbtns-content svg.navicons g#mountain .to-fill {
     transform: scaleY(0);
     transform-origin: bottom;
 }
-#photographie > div > .navbtns-content svg.navicons g.nli-current g#mountain .to-fill {
+#photo > div > .navbtns-content svg.navicons g.nli-current g#mountain .to-fill {
     transform-origin: top;
 }
-#photographie > div > .navbtns-content svg.navicons g > g#mountain {
+#photo > div > .navbtns-content svg.navicons g > g#mountain {
     transform: scaleX(0);
     transform-origin: 90%;
 }
-#photographie > div > .navbtns-content svg.navicons g.nli-current > g#mountain {
+#photo > div > .navbtns-content svg.navicons g.nli-current > g#mountain {
     transform: scaleX(1);
     transform-origin: 19px;
 }
@@ -310,22 +310,22 @@ nav {
     transform: scaleX(1) scaleY(1) !important;
 }
 
-#photographie > div > .navbtns-content svg.navicons g#sun * {
+#photo > div > .navbtns-content svg.navicons g#sun * {
     transition: var(--VHTRP-txttr),
                 transform 0.8s cubic-bezier(0.3, 0.8, 0, 1),
                 transform-origin 0s;
 }
-#photographie > div > .navbtns-content svg.navicons g#sun.nli-current * {
+#photo > div > .navbtns-content svg.navicons g#sun.nli-current * {
     transition: var(--VHTRP-txttr),
                 transform 0.7s cubic-bezier(0.3, 0.7, 0, 1),
                 transform-origin 0s;
 }
-#photographie > div > .navbtns-content svg.navicons g * {
+#photo > div > .navbtns-content svg.navicons g * {
     transition: var(--VHTRP-txttr),
                 transform 1.2s cubic-bezier(0.3, 0.8, 0, 1),
                 transform-origin 0s;
 }
-#photographie > div > .navbtns-content svg.navicons g.nli-current * {
+#photo > div > .navbtns-content svg.navicons g.nli-current * {
     transition: var(--VHTRP-txttr),
                 transform 0.7s cubic-bezier(0.4, 0.6, 0, 1),
                 transform-origin 0s;
@@ -471,7 +471,7 @@ main#swup {
 }
 
 
-/*-/ PHOTOGRAPHIE /-*/
+/*-/ PHOTO /-*/
 #photo-gallery  {
     position: relative;
 }

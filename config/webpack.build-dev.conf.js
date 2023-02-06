@@ -23,7 +23,7 @@ const specialFilesToCopy = [
 // CONFIG
 const baseWebpackConfig = require("./webpack.base.conf");
 const buildWebpackConfig = merge(baseWebpackConfig, {
-  mode: "production",
+  mode: "development",
   output: {
     publicPath: "./",
     path: PATHS.publicDev,
