@@ -38,7 +38,7 @@ var videoList = [
     {
         url : 'ej2sugsP67A',
         thumbnail : 'c418.jpg',
-        title : 'Independent Accident - C418',
+        title : 'C418 - Independent Accident',
         date : "2013.01"
     },
     {
@@ -50,7 +50,7 @@ var videoList = [
     {
         url : '2HE4xf-3qE0',
         thumbnail : 'haruka-nakamura.jpg',
-        title : 'MELODICA (feat. ARAKI Shin)',
+        title : 'Haruka Nakamura - MELODICA (feat. ARAKI Shin)',
         date : "2013.09"
     },
 ];
