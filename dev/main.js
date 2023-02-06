@@ -39,19 +39,19 @@ var videoList = [
         url : 'ej2sugsP67A',
         thumbnail : 'c418.jpg',
         title : 'Independent Accident - C418',
-        date : "2012"
+        date : "2013.01"
     },
     {
         url : '-pY__IYHYMc',
         thumbnail : 'nujabes.jpg',
         title : 'Nujabes - Luv (sic.) pt3',
-        date : "2020.12"
+        date : "2005.11"
     },
     {
         url : '2HE4xf-3qE0',
         thumbnail : 'haruka-nakamura.jpg',
         title : 'MELODICA (feat. ARAKI Shin)',
-        date : "2013"
+        date : "2013.09"
     },
 ];
 
