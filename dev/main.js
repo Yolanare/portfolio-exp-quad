@@ -227,7 +227,7 @@ function init() {
 
         function applyBGColor(ID) {
             function pageBGClass(ID) {
-                if(ID == 'accueil') { document.querySelector('.parallax-el').innerHTML = `<video id="page-bg" autoplay muted loop><source src="/assets/medias/accueil/prllx/bg.mp4" type="video/mp4"></video>`;
+                if(ID == 'accueil') { document.querySelector('.parallax-el').innerHTML = `<video id="page-bg" autoplay muted loop><source src="https://yolan.art/portfolio-exp-quad/dev/assets/medias/accueil/prllx/bg.mp4" type="video/mp4"></video>`;
                 } else { document.querySelector('.parallax-el').innerHTML = `<div id="page-bg"></div>`; }
                 var pageBG = document.querySelector('#page-bg');
                 //var fg = document.querySelector('#fg');
