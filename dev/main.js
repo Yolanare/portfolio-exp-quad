@@ -95,8 +95,10 @@ function init() {
 
     var pathDir;
     function getPageID() {
-        pathDir = window.location.pathname.replace("index.html", "").replace(/\/[^/]*$/, '').replace(/^\//, ''); // remove "index.thml", start and end "/"
-        if(pathDir == "" || !["photo", "video", "contact"].includes(pathDir.match(/([^\/]+$)/)[0])) { pathDir = 'accueil'; }; // match if page after last "/", check if home
+        pathDir = ("/test" + window.location.pathname).replace("index.html", "").replace(/\/[^/]*$/, '').replace(/^\//, ''); // remove "index.thml", start and end "/"
+        const pathDirMatchPage = pathDir.match(/([^\/]+$)/)[0]; // match if page dir after last "/"
+        if(pathDir == "" || !["photo", "video", "contact"].includes(pathDirMatchPage)) { pathDir = 'accueil'; } // check if home
+        else { pathDir = pathDirMatchPage; }
         return pathDir;
     }
     getPageID();
