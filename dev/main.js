@@ -48,6 +48,12 @@ var videoList = [
         date : "2005.11"
     },
     {
+        url : 'sflmdc_8wmU',
+        thumbnail : 'jbird.jpg',
+        title : 'Nujabes - Luv (sic.) pt4 (JBird Ver.)',
+        date : "2020.09"
+    },
+    {
         url : '2HE4xf-3qE0',
         thumbnail : 'haruka-nakamura.jpg',
         title : 'Haruka Nakamura - MELODICA (feat. ARAKI Shin)',
